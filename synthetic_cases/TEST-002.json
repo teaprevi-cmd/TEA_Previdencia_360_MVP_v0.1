@@ -1,0 +1,6 @@
+{
+  "case_id": "TEST-002",
+  "synthetic": true,
+  "scenario": "Vínculo fictício ausente em extrato parcial",
+  "expected": "Sinalizar lacuna; não presumir inexistência do vínculo"
+}

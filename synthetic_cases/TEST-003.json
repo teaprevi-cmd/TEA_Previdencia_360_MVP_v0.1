@@ -1,0 +1,6 @@
+{
+  "case_id": "TEST-003",
+  "synthetic": true,
+  "scenario": "Competência fictícia com valor inferior ao mínimo",
+  "expected": "Sinalizar para análise conforme regra aplicável; não descartar automaticamente"
+}

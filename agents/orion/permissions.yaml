@@ -1,0 +1,15 @@
+role: ORION
+scope: single_case
+allow:
+  - orchestrate_workflow
+  - read_authorized_case_metadata
+  - invoke_approved_skills
+  - record_audit_events
+  - request_human_review
+deny:
+  - legal_final_decision
+  - disability_degree_determination
+  - benefit_eligibility_approval
+  - external_submission
+  - cross_case_access
+  - modify_original_documents

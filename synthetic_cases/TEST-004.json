@@ -1,0 +1,6 @@
+{
+  "case_id": "TEST-004",
+  "synthetic": true,
+  "scenario": "Documento fictício ilegível",
+  "expected": "Status inconclusivo e retorno à coleta"
+}

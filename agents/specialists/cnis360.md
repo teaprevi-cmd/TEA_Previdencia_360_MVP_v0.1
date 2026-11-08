@@ -1,0 +1,2 @@
+# CNIS360 — especialista temporário
+Organiza dados contributivos extraídos, aponta lacunas, divergências, indicadores de remuneração/competência e itens que exigem conferência. Não decide validade de vínculo, carência, tempo reconhecido ou direito ao benefício.

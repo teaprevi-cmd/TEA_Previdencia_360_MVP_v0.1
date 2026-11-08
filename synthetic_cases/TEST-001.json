@@ -1,0 +1,6 @@
+{
+  "case_id": "TEST-001",
+  "synthetic": true,
+  "scenario": "CNIS fictício sem divergências aparentes",
+  "expected": "Organizar dados e manter status pendente até conferência humana"
+}

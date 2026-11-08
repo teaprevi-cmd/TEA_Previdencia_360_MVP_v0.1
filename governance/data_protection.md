@@ -1,0 +1,2 @@
+# Proteção de dados — pontos para aprovação
+Antes de qualquer piloto real, definir controlador/operadores, finalidade, hipótese legal, transparência, direitos dos titulares, minimização, retenção, descarte, segurança, resposta a incidentes, contratos com fornecedores e avaliação de impacto quando aplicável. Dados de saúde e deficiência são sensíveis; não usar em testes nem em prompts externos sem avaliação formal.

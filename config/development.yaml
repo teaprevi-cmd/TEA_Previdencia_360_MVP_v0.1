@@ -1,0 +1,4 @@
+environment: development
+synthetic_data_only: true
+external_connectors_enabled: false
+human_review_required: true

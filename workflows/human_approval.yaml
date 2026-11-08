@@ -1,0 +1,6 @@
+name: human_approval
+required_role: authorized_human_reviewer
+required_fields: [reviewer_id, decision, rationale, timestamp]
+decisions: [APPROVE, RETURN]
+agent_can_approve: false
+approval_scope: operational_release_of_preliminary_dossier_only

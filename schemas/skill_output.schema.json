@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "skill",
+    "status",
+    "items",
+    "limitations"
+  ],
+  "properties": {
+    "skill": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "CONFIRMADO",
+        "PENDENTE_VALIDACAO",
+        "INCONCLUSIVO"
+      ]
+    },
+    "items": {
+      "type": "array"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

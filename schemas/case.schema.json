@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "state",
+    "synthetic",
+    "consent_recorded"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "consent_recorded": {
+      "type": "boolean"
+    },
+    "documents": {
+      "type": "array"
+    },
+    "facts": {
+      "type": "array"
+    },
+    "pendencies": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

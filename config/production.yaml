@@ -1,0 +1,6 @@
+# Modelo de referência; NÃO habilitado.
+environment: production
+release_blocked: true
+requires_security_review: true
+requires_privacy_approval: true
+requires_legal_approval: true

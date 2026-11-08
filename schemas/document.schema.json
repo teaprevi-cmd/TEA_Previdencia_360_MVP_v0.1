@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "document_id",
+    "document_type",
+    "source",
+    "version",
+    "status"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string"
+    },
+    "document_type": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "PENDENTE_VALIDACAO",
+        "INCONCLUSIVO"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

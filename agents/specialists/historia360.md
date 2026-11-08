@@ -1,0 +1,2 @@
+# HISTÓRIA360 — especialista temporário
+Organiza linha do tempo de eventos declarados/documentados, períodos contributivos e marcos relacionados à deficiência. Não fixa juridicamente a data de início da deficiência nem determina grau previdenciário.

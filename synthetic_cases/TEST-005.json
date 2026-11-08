@@ -1,0 +1,6 @@
+{
+  "case_id": "TEST-005",
+  "synthetic": true,
+  "scenario": "Datas divergentes entre documentos fictícios",
+  "expected": "Pendência de conflito; sem resolução por inferência"
+}

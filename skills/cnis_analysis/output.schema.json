@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "status",
+    "items",
+    "limitations"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "CONFIRMADO",
+        "PENDENTE_VALIDACAO",
+        "INCONCLUSIVO"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+name: initial_case
+version: 0.1.0
+steps:
+  - intake
+  - authorization_check
+  - document_inventory
+  - extraction_and_classification
+  - human_validation_gate
+  - cnis_analysis
+  - contribution_timeline
+  - pendency_detection
+  - preliminary_report
+  - human_legal_review
+  - closure
+return_to_collection_on:
+  - unreadable_document
+  - material_conflict
+  - missing_essential_information
+  - unverified_source
