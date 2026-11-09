@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "case_id": "CASE-0001",
   "environment": "MODO_SINTETICO",
-  "information_state": "PENDENTE_VALIDACAO",
+  "information_state": "CONFIRMADO",
   "subject": {
     "subject_id": "SUBJ-CASE-0001-001",
     "display_name": "Segurado Sintético CASE-0001",
