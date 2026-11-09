@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "case_id": "CASE-0001",
   "environment": "MODO_SINTETICO",
-  "information_state": "CONFIRMADO",
+  "information_state": "PENDENTE_VALIDACAO",
   "subject": {
     "subject_id": "SUBJ-CASE-0001-001",
     "display_name": "Segurado Sintético CASE-0001",
@@ -22,6 +22,12 @@
       "document_type": "neuropsychological_report",
       "information_state": "PENDENTE_VALIDACAO",
       "structured_file": "documents/DOC-0001.json"
+    },
+    {
+      "document_id": "DOC-0002",
+      "document_type": "cnis_extract",
+      "information_state": "PENDENTE_VALIDACAO",
+      "structured_file": "documents/DOC-0002.json"
     }
   ],
   "created_at": "2026-11-09T00:00:00Z"

@@ -3,10 +3,6 @@ from pathlib import Path
 from datetime import datetime
 
 def run_orion(case_id):
-    """
-    O ORION lê o caso sintético e os documentos estruturados.
-    Ele NUNCA emite conclusão jurídica. Apenas inventaria e alerta.
-    """
     case_path = Path(f"synthetic_cases/{case_id}/case.json")
     if not case_path.exists():
         return {"error": f"Caso {case_id} não encontrado."}
@@ -32,8 +28,7 @@ def run_orion(case_id):
             if "diagnostic_hypotheses" in fields:
                 for hyp in fields["diagnostic_hypotheses"]:
                     report["findings"].append(
-                        f"📄 Documento {doc['document_id']}: "
-                        f"Hipótese de {hyp['label']} (Status: {hyp['status']})"
+                        f"📄 Documento {doc['document_id']}: Hipótese de {hyp['label']} (Status: {hyp['status']})"
                     )
             
             if "functional_impact" in fields:
@@ -42,6 +37,11 @@ def run_orion(case_id):
                     report["findings"].append("⚠️ Perfil funcional indica necessidade de previsibilidade e rotina.")
                 if impact.get("sensory_sensitivities"):
                     report["findings"].append("⚠️ Perfil funcional indica hipersensibilidade sensorial.")
+
+            if "pending_periods" in fields:
+                report["findings"].append(f"📊 Documento {doc['document_id']}: Tempo de contribuição inventariado ({fields.get('total_time_contribution_years')} anos e {fields.get('total_time_contribution_months')} meses).")
+                for pend in fields["pending_periods"]:
+                    report["findings"].append(f"🚨 PENDÊNCIA NO CNIS ({pend['start_date']} a {pend['end_date']}): {pend['reason']}. Requer documentação complementar.")
                     
     report["conclusion"] = "🛡️ ANÁLISE INCONCLUSIVA PARA FINS JURÍDICOS. REQUER REVISÃO HUMANA."
     return report

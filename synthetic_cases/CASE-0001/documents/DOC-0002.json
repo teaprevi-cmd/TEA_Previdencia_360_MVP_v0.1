@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "document_id": "DOC-0002",
+  "case_id": "CASE-0001",
+  "document_type": "cnis_extract",
+  "information_state": "PENDENTE_VALIDACAO",
+  "source": {
+    "original_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "privacy": {
+    "contains_personal_data": false,
+    "contains_sensitive_health_data": false,
+    "raw_text_to_llm": false,
+    "retention": "manifest_only"
+  },
+  "extracted_fields": {
+    "total_time_contribution_years": 24,
+    "total_time_contribution_months": 8,
+    "pending_periods": [
+      {
+        "start_date": "2018-05-01",
+        "end_date": "2019-04-30",
+        "reason": "Vinculo com Indicadores"
+      },
+      {
+        "start_date": "2023-01-01",
+        "end_date": "2023-03-31",
+        "reason": "Vinculo com Indicadores"
+      }
+    ]
+  },
+  "created_at": "2026-11-09T00:00:00Z"
+}
