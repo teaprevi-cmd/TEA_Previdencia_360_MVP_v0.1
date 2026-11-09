@@ -4,25 +4,25 @@
   "case_id": "CASE-0001",
   "document_type": "neuropsychological_report",
   "information_state": "PENDENTE_VALIDACAO",
-  "issued_date": null,
+  "issued_date": "2026-07-20",
   "issuer": {
-    "role": "neuropsychologist",
-    "council_type": null,
-    "council_number": null,
-    "municipality": null,
-    "uf": null
+    "role": "Psiquiatra e Neuropsicóloga",
+    "council_type": "CRM-RJ / CRP-05",
+    "council_number": "20116825-8 / 63415",
+    "municipality": "Rio de Janeiro",
+    "uf": "RJ"
   },
   "source": {
-    "original_file_name": null,
-    "original_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
-    "redacted_file": null,
+    "original_file_name": "Laudo_e_Avaliacao_Neuropsicologica.pdf",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "redacted_file": "documents/DOC-0001.redacted.pdf",
     "redaction": {
-      "automatic_redaction": false,
-      "manual_redaction_required": true
+      "automatic_redaction": true,
+      "manual_redaction_required": false
     }
   },
   "privacy": {
-    "contains_personal_data": false,
+    "contains_personal_data": true,
     "contains_sensitive_health_data": true,
     "raw_text_to_llm": false,
     "retention": "manifest_only"
@@ -32,26 +32,26 @@
       {
         "code_system": "CID-10",
         "code": "F84.0",
-        "label": "Transtorno do Espectro Autista",
+        "label": "Transtorno do Espectro Autista (TEA)",
         "support_level": "1",
         "presentation": null,
-        "status": "sugestivo"
+        "status": "confirmado"
       },
       {
         "code_system": "CID-10",
         "code": "F90.2",
-        "label": "Transtorno do Déficit de Atenção/Hiperatividade",
+        "label": "Transtorno do Déficit de Atenção/Hiperatividade (TDAH)",
         "support_level": null,
         "presentation": "combinada",
-        "status": "sugestivo"
+        "status": "confirmado"
       },
       {
         "code_system": "outro",
         "code": null,
-        "label": "Altas Habilidades/Superdotação",
+        "label": "Altas Habilidades/Superdotação (AH/SD)",
         "support_level": null,
         "presentation": null,
-        "status": "sugestivo"
+        "status": "confirmado"
       }
     ],
     "functional_impact": {
@@ -75,8 +75,8 @@
     {
       "field": "extracted_fields.diagnostic_hypotheses[0]",
       "source_id": "DOC-0001",
-      "page": null,
-      "confidence": null
+      "page": 1,
+      "confidence": 1.0
     }
   ],
   "created_at": "2026-11-09T00:00:00Z"

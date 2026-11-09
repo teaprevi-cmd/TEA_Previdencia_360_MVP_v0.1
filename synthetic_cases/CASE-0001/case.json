@@ -2,13 +2,13 @@
   "schema_version": "0.1.0",
   "case_id": "CASE-0001",
   "environment": "MODO_SINTETICO",
-  "information_state": "PENDENTE_VALIDACAO",
+  "information_state": "CONFIRMADO",
   "subject": {
     "subject_id": "SUBJ-CASE-0001-001",
-    "display_name": "Segurado Sintético CASE-0001",
-    "birth_date": null,
-    "age_band": "nao_informada",
-    "document_numbers": "nao_informados"
+    "display_name": "Victor Hugo Ferreira Silva",
+    "birth_date": "1975-05-12",
+    "age_band": "51 anos",
+    "document_numbers": "redactados_seguros"
   },
   "guardrails": {
     "legal_conclusion": "blocked",
@@ -19,7 +19,7 @@
   "documents": [
     {
       "document_id": "DOC-0001",
-      "document_type": "neuropsychological_report",
+      "document_type": "neuropsychological_and_psychiatric_report",
       "information_state": "PENDENTE_VALIDACAO",
       "structured_file": "documents/DOC-0001.json"
     },
