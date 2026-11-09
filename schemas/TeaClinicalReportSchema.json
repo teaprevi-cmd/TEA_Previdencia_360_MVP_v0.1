@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/TeaClinicalReportSchema.json",
+  "title": "PreviTEA TEA Clinical Report Schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "DocumentSchema.json"
+    }
+  ],
+  "properties": {
+    "document_type": {
+      "enum": [
+        "medical_report",
+        "neuropsychological_report",
+        "psychiatric_report"
+      ]
+    },
+    "extracted_fields": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "diagnostic_hypotheses",
+        "functional_impact"
+      ],
+      "properties": {
+        "diagnostic_hypotheses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "status"
+            ],
+            "properties": {
+              "code_system": {
+                "enum": [
+                  "CID-10",
+                  "CID-11",
+                  "DSM-5-TR",
+                  "outro"
+                ]
+              },
+              "code": {
+                "type": ["string", "null"]
+              },
+              "label": {
+                "type": "string"
+              },
+              "support_level": {
+                "enum": [
+                  "1",
+                  "2",
+                  "3",
+                  "nao_se_aplica",
+                  null
+                ]
+              },
+              "presentation": {
+                "type": ["string", "null"]
+              },
+              "status": {
+                "enum": [
+                  "confirmado",
+                  "sugestivo",
+                  "pendente_validacao",
+                  "inconclusivo"
+                ]
+              }
+            }
+          }
+        },
+        "functional_impact": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "social_interaction": {
+              "enum": [
+                "baixo",
+                "leve",
+                "moderado",
+                "grave",
+                "nao_informado"
+              ]
+            },
+            "professional_context": {
+              "enum": [
+                "baixo",
+                "leve",
+                "moderado",
+                "grave",
+                "nao_informado"
+              ]
+            },
+            "affective_relationships": {
+              "enum": [
+                "baixo",
+                "leve",
+                "moderado",
+                "grave",
+                "nao_informado"
+              ]
+            },
+            "daily_life": {
+              "enum": [
+                "baixo",
+                "leve",
+                "moderado",
+                "grave",
+                "nao_informado"
+              ]
+            },
+            "sensory_sensitivities": {
+              "type": "boolean"
+            },
+            "need_for_predictability": {
+              "type": "boolean"
+            },
+            "literal_communication": {
+              "type": "boolean"
+            }
+          }
+        },
+        "cognitive_profile": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "overall_intellectual_functioning": {
+              "enum": [
+                "abaixo_da_media",
+                "media",
+                "media_superior",
+                "superior",
+                "muito_superior",
+                "nao_informado"
+              ]
+            },
+            "working_memory": {
+              "enum": [
+                "abaixo_da_media",
+                "media",
+                "media_superior",
+                "superior",
+                "muito_superior",
+                "nao_informado"
+              ]
+            },
+            "processing_speed": {
+              "enum": [
+                "abaixo_da_media",
+                "media",
+                "media_superior",
+                "superior",
+                "muito_superior",
+                "nao_informado"
+              ]
+            },
+            "attention": {
+              "enum": [
+                "abaixo_da_media",
+                "media",
+                "media_superior",
+                "superior",
+                "muito_superior",
+                "nao_informado"
+              ]
+            },
+            "executive_functioning": {
+              "enum": [
+                "prejudicado",
+                "preservado_em_teste_estruturado",
+                "misto",
+                "nao_informado"
+              ]
+            }
+          }
+        },
+        "raw_text": {
+          "const": null
+        }
+      }
+    }
+  }
+}

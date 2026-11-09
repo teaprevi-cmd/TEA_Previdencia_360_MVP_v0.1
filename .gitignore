@@ -1,2 +1,26 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Dados sensíveis / originais
+originals_private/
+raw/
+incoming/
+*_privado/
+*.pdf
+
+# Exceções para artefatos sintéticos permitidos
+!synthetic_cases/**/*.redacted.pdf
+!synthetic_cases/**/*.json
+
+# Logs e segredos
+governance/audit_logs/*.log
+*.env
+*.local.json
+tools/sanitization_entities.local.json
+
+# Backups
+*.bak

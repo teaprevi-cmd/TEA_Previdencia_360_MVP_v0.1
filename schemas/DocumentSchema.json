@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/DocumentSchema.json",
+  "title": "PreviTEA DocumentSchema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "document_id",
+    "case_id",
+    "document_type",
+    "information_state",
+    "source",
+    "privacy",
+    "extracted_fields"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "document_id": {
+      "type": "string",
+      "pattern": "^DOC-[A-Za-z0-9_-]+$"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^CASE-[A-Za-z0-9_-]+$"
+    },
+    "document_type": {
+      "enum": [
+        "medical_report",
+        "neuropsychological_report",
+        "psychiatric_report",
+        "identity_document",
+        "driver_license",
+        "education_diploma",
+        "social_security_simulation",
+        "cnis_extract",
+        "employment_record",
+        "other"
+      ]
+    },
+    "information_state": {
+      "enum": [
+        "CONFIRMADO",
+        "PENDENTE_VALIDACAO",
+        "INCONCLUSIVO"
+      ]
+    },
+    "issued_date": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "issuer": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": ["string", "null"]
+        },
+        "council_type": {
+          "type": ["string", "null"]
+        },
+        "council_number": {
+          "type": ["string", "null"]
+        },
+        "municipality": {
+          "type": ["string", "null"]
+        },
+        "uf": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "original_sha256"
+      ],
+      "properties": {
+        "original_file_name": {
+          "type": ["string", "null"]
+        },
+        "original_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "redacted_file": {
+          "type": ["string", "null"]
+        },
+        "redaction": {
+          "type": "object"
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_text_to_llm"
+      ],
+      "properties": {
+        "contains_personal_data": {
+          "type": "boolean"
+        },
+        "contains_sensitive_health_data": {
+          "type": ["boolean", "null"]
+        },
+        "raw_text_to_llm": {
+          "const": false
+        },
+        "retention": {
+          "enum": [
+            "manifest_only",
+            "redacted_only",
+            "restricted_access"
+          ]
+        }
+      }
+    },
+    "extracted_fields": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "field",
+          "source_id"
+        ],
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string"
+          },
+          "page": {
+            "type": ["integer", "null"]
+          },
+          "confidence": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

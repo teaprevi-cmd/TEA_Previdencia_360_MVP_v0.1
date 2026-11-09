@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "case_id": "CASE-0001",
+  "environment": "MODO_SINTETICO",
+  "information_state": "PENDENTE_VALIDACAO",
+  "subject": {
+    "subject_id": "SUBJ-CASE-0001-001",
+    "display_name": "Segurado Sintético CASE-0001",
+    "birth_date": null,
+    "age_band": "nao_informada",
+    "document_numbers": "nao_informados"
+  },
+  "guardrails": {
+    "legal_conclusion": "blocked",
+    "rmi_calculation": "blocked",
+    "external_protocol": "blocked",
+    "human_approval_required": true
+  },
+  "documents": [
+    {
+      "document_id": "DOC-0001",
+      "document_type": "neuropsychological_report",
+      "information_state": "PENDENTE_VALIDACAO",
+      "structured_file": "documents/DOC-0001.json"
+    }
+  ],
+  "created_at": "2026-11-09T00:00:00Z"
+}

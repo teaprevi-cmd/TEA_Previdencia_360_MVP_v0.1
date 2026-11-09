@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PreviTEA — Caso CASE-0001</title>
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #fffdf8;
+      --text: #222222;
+      --muted: #5b5b5b;
+      --border: #d8d3c8;
+      --accent: #31618a;
+      --accent-soft: #eaf1f7;
+      --warning-bg: #faf3e0;
+      --warning-border: #d8b65e;
+      --warning-text: #6a5300;
+      --focus: #1d4e89;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Atkinson Hyperlegible", "Lexend", "Segoe UI", Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin: 0 0 8px 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .progress {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .progress li {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .progress li.active {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 4px 0;
+    }
+
+    .status {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 6px 10px;
+      border: 1px solid var(--warning-border);
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin: 8px 0;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    button {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 11px 14px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    button:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .notice {
+      border: 1px solid var(--warning-border);
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>PreviTEA — Caso CASE-0001</h1>
+      <p class="subtitle">
+        Ambiente de homologação com dados sintéticos. Nenhum direito está sendo calculado.
+      </p>
+    </header>
+
+    <ol class="progress" aria-label="Progresso do caso">
+      <li>Início</li>
+      <li>Consentimento</li>
+      <li>Documentos</li>
+      <li class="active">Triagem</li>
+      <li>Pendências</li>
+      <li>Revisão humana</li>
+      <li>Relatório</li>
+    </ol>
+
+    <div class="notice">
+      Os documentos abaixo estão em estado PENDENTE_VALIDACAO.
+      A aprovação final deve ser feita por profissional autorizado.
+    </div>
+
+    <section aria-label="Documentos do caso">
+      <article class="card">
+        <h2>Avaliação sintética</h2>
+        <p class="meta">Tipo: neuropsychological_report</p>
+        <p class="meta">Origem: DOC-0001</p>
+        <span class="status">PENDENTE_VALIDACAO</span>
+        <p>
+          Estrutura recebida com hipóteses diagnósticas e impacto funcional.
+          Texto bruto não será exibido nem enviado para análise automática.
+        </p>
+        <div class="actions">
+          <button type="button">Revisar campos</button>
+          <button type="button">Ver metadados</button>
+        </div>
+      </article>
+    </section>
+
+    <section aria-label="Ações do caso">
+      <div class="actions">
+        <button type="button">Salvar e sair</button>
+        <button type="button">Voltar</button>
+        <button type="button" class="primary">Continuar para pendências</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

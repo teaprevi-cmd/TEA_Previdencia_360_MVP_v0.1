@@ -1,0 +1,7 @@
+{
+  "nome_real": "\\bNOME_REAL\\b",
+  "sobrenome_real": "\\bSOBRENOME_REAL\\b",
+  "nome_profissional": "\\bPROFISSIONAL_REAL\\b",
+  "endereco_real": "\\bENDERECO_REAL\\b",
+  "documento_real": "\\bDOCUMENTO_REAL\\b"
+}

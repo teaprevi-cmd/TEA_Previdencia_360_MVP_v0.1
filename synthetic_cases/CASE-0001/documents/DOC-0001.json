@@ -1,0 +1,83 @@
+{
+  "schema_version": "0.1.0",
+  "document_id": "DOC-0001",
+  "case_id": "CASE-0001",
+  "document_type": "neuropsychological_report",
+  "information_state": "PENDENTE_VALIDACAO",
+  "issued_date": null,
+  "issuer": {
+    "role": "neuropsychologist",
+    "council_type": null,
+    "council_number": null,
+    "municipality": null,
+    "uf": null
+  },
+  "source": {
+    "original_file_name": null,
+    "original_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "redacted_file": null,
+    "redaction": {
+      "automatic_redaction": false,
+      "manual_redaction_required": true
+    }
+  },
+  "privacy": {
+    "contains_personal_data": false,
+    "contains_sensitive_health_data": true,
+    "raw_text_to_llm": false,
+    "retention": "manifest_only"
+  },
+  "extracted_fields": {
+    "diagnostic_hypotheses": [
+      {
+        "code_system": "CID-10",
+        "code": "F84.0",
+        "label": "Transtorno do Espectro Autista",
+        "support_level": "1",
+        "presentation": null,
+        "status": "sugestivo"
+      },
+      {
+        "code_system": "CID-10",
+        "code": "F90.2",
+        "label": "Transtorno do Déficit de Atenção/Hiperatividade",
+        "support_level": null,
+        "presentation": "combinada",
+        "status": "sugestivo"
+      },
+      {
+        "code_system": "outro",
+        "code": null,
+        "label": "Altas Habilidades/Superdotação",
+        "support_level": null,
+        "presentation": null,
+        "status": "sugestivo"
+      }
+    ],
+    "functional_impact": {
+      "social_interaction": "moderado",
+      "professional_context": "moderado",
+      "affective_relationships": "moderado",
+      "daily_life": "leve",
+      "sensory_sensitivities": true,
+      "need_for_predictability": true,
+      "literal_communication": true
+    },
+    "cognitive_profile": {
+      "overall_intellectual_functioning": "superior",
+      "working_memory": "muito_superior",
+      "processing_speed": "media",
+      "attention": "media_superior",
+      "executive_functioning": "preservado_em_teste_estruturado"
+    }
+  },
+  "provenance": [
+    {
+      "field": "extracted_fields.diagnostic_hypotheses[0]",
+      "source_id": "DOC-0001",
+      "page": null,
+      "confidence": null
+    }
+  ],
+  "created_at": "2026-11-09T00:00:00Z"
+}
